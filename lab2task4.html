@@ -3,10 +3,33 @@
 <head>
     <title>Form</title>
 </head>
+<script>
+function validateDOB() {
 
+    let day = document.getElementById("day").value.trim();
+    let month = document.getElementById("month").value.trim();
+    let year = document.getElementById("year").value.trim();
+
+    // empty check
+    if (day === "" || month === "" || year === "") {
+        alert("Day, Month, and Year cannot be empty.");
+        return false;
+    }
+       //valid numbers
+    if (isNaN(day) || isNaN(month) || isNaN(year)) {
+        alert("Day, Month, and Year must be valid numbers.");
+        return false;
+    }
+
+
+
+
+}
+
+</script>
 <body>
 
-    <form>
+    <form onsubmit="return validateDOB()">
         <table width="300">
             <tr>
                 <td>

@@ -1,8 +1,8 @@
 console.log("Hello, World!"); 
 
-let name = "Alice"; // String
-const age = 25;    // Number
-let isStudent = true; // Boolean
+let name = "Alice"; 
+const age = 25;    
+let isStudent = true; 
 
 console.log(`Name: ${name}, Age: ${age}, Student: ${isStudent}`);
 
@@ -34,7 +34,7 @@ console.log(`The sum is: ${sum}`);
 let fruits = ["Apple", "Banana", "Cherry"];
 
 console.log(`First fruit: ${fruits[0]}`);
-fruits.push("Date"); // Add an element
+fruits.push("Date"); 
 console.log(`All fruits: ${fruits}`);
 
 let person = {
@@ -45,5 +45,5 @@ let person = {
 
 console.log(`Person's full name: ${person.firstName} ${person.lastName}`);
 
-// In your HTML, you would have: <p id="demo"></p>
+<p id="demo"></p>
 document.getElementById("demo").innerHTML = "Hello from JavaScript!";
