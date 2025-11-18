@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+        
+            let usernameInput = document.getElementById("101");
+            let username = usernameInput.value.trim();
+
+            //not empty
+            if (username === "") {
+                alert("Name cannot be empty.");
+                return false;
+            }
+
+           
+
+            //at least 2 words
+            let wordCount = username.length;
+            if (wordCount <= 2) {
+                alert("Name must contain at least 2 words.");
+                return false;
+            }
+            
+            let firstChar = username.charAt(0);
+
+            //start with a letter
+            let isUppercase = (firstChar >= 'A' && firstChar <= 'Z');
+            let isLowercase = (firstChar >= 'a' && firstChar <= 'z');
+
+            if (isUppercase || isLowercase) {
+            
+                return true;
+            } else {
+                alert("Validation Error: Name must start with a letter (A-Z or a-z).");
+                return false;
+            }
+          //contain a-z or A-Z 
+        let allowedChars = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,];
+
+        for (let i = 0; i < username.length; i++) {
+             let char = username.charAt(i);
+
+            if (allowedChars.includes(char)) {
+                containsRequiredChar = true;
+                break; 
+            }
+        }
+
+        if (allowedChars.includes(char)=true) {
+            alert("Validation successful: Name contains a-z letter.");
+            return true;
+        } else {
+            alert("Validation Error: Name must contain a-z letter.");
+            return false;
+        } 
+
+            // If all checks pass
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="101">Name</label><br>
+        <input type="text" id="101" name="username"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
